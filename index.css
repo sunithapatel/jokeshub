@@ -1,0 +1,44 @@
+@font-face {
+    font-family: 'Nickainley';
+    src: url('nickainley.regular.otf');
+}
+
+body {
+    background-color: #f8f8f8;
+    color: #814256;
+    padding: 0 16px;
+}
+
+/* header */
+
+header {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #d9d9d9;
+}
+
+.question {
+    font-family: 'Nickainley';
+    font-size: 70pt;
+    font-weight: normal;
+}
+
+.message {
+    font-family: 'Open Sans';
+    font-size: 18pt;
+    font-weight: normal;
+}
+
+.jokes-gallery {
+    margin: 16px 20%;
+}
+
+.joke-card {
+    margin: 72px 0;
+    border: 1px solid #d9d9d9;
+    border-radius: 8px;
+    box-shadow: 5px -5px 5px 0px #F6EDF7;
+    padding: 32px;
+    font-family: 'Open Sans';
+    font-size: 24pt;
+}
