@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <title>Jokes Hub</title>
-        <link rel="stylesheet" href="index.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open%20Sans">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Gluten">
-    </head>
-    <body>
+import './App.css';
+import laughimage from '../assets/laugh.png';
+import laughinganimals from '../assets/laughing-animals.png';
+
+function App() {
+    return (
         <main>
             <header>
                 <h1 class="question">Need Some Laughs?</h1>
-                <img src="assets/laugh.png" />
+                <img src={laughimage} alt="Big laugh" />
                 <h2 class="message">Scroll through our random supply of jokes to get your fill today!</h2>
-                <img class="laughing-image" src="assets/laughing-animals.png" />
+                <img class="laughing-image" src={laughinganimals} alt="Cute laughing animals" />
             </header>
             <section class="content">
                 <div class="jokes-gallery">
@@ -39,5 +36,7 @@
 
             </footer>
         </main> 
-    </body>
-</html>
+    );
+}
+
+export default App;
