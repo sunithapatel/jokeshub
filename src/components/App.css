@@ -7,9 +7,8 @@ body {
     background-color: #f8f8f8;
     color: #814256;
     padding: 0 16px;
+    font-family: 'Open Sans';
 }
-
-/* header */
 
 header {
     width: 100%;
@@ -23,8 +22,7 @@ header {
     font-weight: normal;
 }
 
-.message {
-    font-family: 'Open Sans';
+.message {    
     font-size: 18pt;
     font-weight: normal;
 }
@@ -41,4 +39,16 @@ header {
     padding: 32px;
     font-family: 'Open Sans';
     font-size: 24pt;
+}
+
+footer {
+    font-size: 12pt;
+    border-top: 1px solid #d9d9d9;
+    padding: 8px 0;
+    text-align: center;
+}
+
+footer a {
+    margin-left: 8px;
+    vertical-align: middle;
 }
