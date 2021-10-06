@@ -2,29 +2,30 @@ import React from 'react';
 
 import './JokesGallery.css';
 
+import JokeRating from './JokeRating';
+
 class JokesGallery extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
           error: null,
           isLoaded: false,
-          jokes: [],
-          comic: null
+          joke: null
         };
     }
 
     componentDidMount() {
-        let headers = new Headers();
+        const headers = new Headers();
         headers.append("Accept", "application/json");
         headers.append("User-Agent", "My Jokes Hub (https://github.com/sunithapatel/jokeshub)");
 
-        fetch("https://icanhazdadjoke.com/search?limit=5", { method: 'Get', headers: headers })
+        fetch("https://icanhazdadjoke.com/", { method: 'Get', headers: headers })
           .then(response => response.json())
           .then(
                 (result) => {
                     this.setState({
                         isLoaded: true,
-                        jokes: result.results
+                        joke: result.joke
                     });
                 },
                 (error) => {
@@ -35,25 +36,18 @@ class JokesGallery extends React.Component {
                 }
             );
     }
-
-    renderJokes() {
-        return (
-            this.state.jokes.map(joke => (
-                <div key={joke.id} className="joke-card">
-                    <div>{joke.joke}</div>
-                    <div className="joke-card-buttons">
-                        <span className="material-icons joke-card-button">grade</span>
-                        <span className="material-icons joke-card-button">volume_up</span>                        
-                    </div>
-                </div>
-            ))
-        );
-    }
     
     render() {
         return (
             <section className="jokes-gallery">
-                {this.renderJokes()}
+                <div className="joke-card">
+                    <div>{this.state.joke}</div>
+                    <div className="joke-card-buttons">
+                        <span className="material-icons joke-card-button">grade</span>
+                        <span className="material-icons joke-card-button">volume_up</span>                        
+                    </div>
+                    <JokeRating />
+                </div>
                 <div className="jokes-source">
                     <span>
                         Source:

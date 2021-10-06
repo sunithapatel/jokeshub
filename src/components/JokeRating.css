@@ -1,0 +1,9 @@
+.rating {
+    display: flex;
+    flex-flow: row;
+}
+
+.rating-option {
+    cursor: pointer;
+    margin: 0 8px;
+}

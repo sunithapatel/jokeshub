@@ -8,9 +8,9 @@ function App() {
     return (
         <main>
             <header>
-                <h1 className="question">Need Some Laughs?</h1>
+                <h1 className="question">Need a Laugh?</h1>
                 <img src={laughimage} alt="Big laugh" />
-                <h2 className="message">Scroll down for some jokes to get your fill today!</h2>
+                <h2 className="message">Check out the random Joke of the Day!</h2>
                 <img className="laughing-image" src={laughinganimals} alt="Cute laughing animals" />
             </header>
             <JokesGallery />
