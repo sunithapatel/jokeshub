@@ -40,7 +40,11 @@ class JokesGallery extends React.Component {
         return (
             this.state.jokes.map(joke => (
                 <div key={joke.id} className="joke-card">
-                    {joke.joke}
+                    <div>{joke.joke}</div>
+                    <div className="joke-card-buttons">
+                        <span className="material-icons joke-card-button">grade</span>
+                        <span className="material-icons joke-card-button">volume_up</span>                        
+                    </div>
                 </div>
             ))
         );
